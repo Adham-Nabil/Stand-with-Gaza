@@ -1,9 +1,10 @@
 .action-sec1{
     width: 100%;
-    height: 60vh;
-    /* background-image: url(../IMGS/action-img-1.avif);
+    min-height:100vh;
+    background-image: url(../assets/action.jpeg);
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
+    background-position: center;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,13 +19,12 @@
     }
     h1{
     font-size: var(--fs-h1);
-    margin-bottom: 30px;
-    text-shadow: 2px 3px 20px var(--color-red);
+    margin-bottom: 20px;
     }
     p{
-        font-size:17px ;
-        color:var(--color-white);
-    margin-bottom: 30px;
+        font-size:var(--fs-body);
+        color: var(--color-light-gray);
+        margin-bottom: 30px;
     }
     button{
     width: 100px;
@@ -38,56 +38,55 @@
     }
    }
 }
-/* .action-sec1::after{
+.action-sec1::after{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.83);
     z-index: 1;
-} */
+}
 .action-sec2{
-    /* background-color: #1f1a1a; */
+    background-color:var(--color-dark);
     text-align: center;
     width: 100%;
     min-height: 65vh;
     padding: 60px 20px;
     h2{
         font-size: var(--fs-h2);
-        color: var(--color-red);
-        padding-bottom: 60px;
+        color: var(--color-white);
+        padding-bottom: 20px;
     }
     .help-cards{
         display: flex;
-        gap: 30px;
+        gap: 45px;
         justify-content: center;
         flex-wrap: wrap;
     }
     .help-card{
         background-color: #222222;
         border-radius: var(--radius-lg);
-        box-shadow: 2px 3px 20px rgba(207, 141, 141, 0.5);
-        width: 370px;
+        width: 350px;
         transition: transform 0.3s , box-shadow 0.3s;
         text-align: center;
         img{
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin-top: 20px;
         }
         h3{
             font-size: var(--fs-h3);
-            color:var(--color-red);
-            padding: 10px;
+            color:var(--color-green);
+            padding: 5px;
         }
         p{
-            font-size: 13px;
+            font-size:var(--fs-body);
             color:var(--color-light-gray);
             line-height: 1.5;
-            padding-bottom: 30px;
+            padding:5px 10px 15px 10px;
         }
     }
 }
@@ -95,113 +94,159 @@
     transform: translateY(-10px);
     box-shadow: 6px 6px 25px var(--color-red);
 }
-@media (max-width: 992px) {
-    .action-sec2 {
-        height: auto;
-    }
-    .action-sec2 .help-cards {
-        gap: 30px;
-    }
-    .action-sec2 .help-card {
-        width: 300px;
-    }
-}
-@media (max-width: 768px) {
-    .action-sec2 .help-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    .action-sec2 .help-card {
-        width: 90%;
-    }
-    .action-sec2 .help-card img {
-        width: 80px;
-        height: 80px;
-    }
-    .action-sec2 .help-card p {
-        font-size: 12px;
-    }
-}
 .action-sec3{
-    /* background-color: #1f1a1a; */
-    text-align: center;
-    width: 100%;
-   min-height: 62vh;
-   padding: 60px 20px;
+    background-color: var(--color-dark);
     h2{
-        color:var(--color-red);
-        padding-bottom: 60px;
-    }
-    .donation-cards{
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .donation-card{
-        background-color: #222222;
-        border-radius: var(--radius-lg);
-        width: 300px;
+        font-size: var(--fs-h2);
+        color: var(--color-white);
         text-align: center;
-        position: relative;
-        overflow: hidden;
-        border: solid var(--color-red);
-        span{
+    }
+}
+.donation-cards{
+    display: flex;
+    flex-direction: column;
+}
+.donation-cards>div:first-child{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.donation-cards>div:last-child{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+.donation-card-1{
+    width: 365px;
+    height: 200px;
+    background-color: #222222;
+    text-align: center;
+    border-radius: 9px;
+    span{
+        font-size: 40px;
+        color: var(--color-green);
+        padding: 20px 0;
+    }
+    p{
+        font-size: var(--fs-body);
+        color: var(--color-light-gray);
+        padding: 0 8px;
+    }
+}
+.donation-card-2{
+    width: 560px;
+    height: 200px;
+    background-color: #222222;
+    text-align: center;
+    border-radius: 9px;
+    span{
+        font-size: 40px;
+        color: var(--color-green);
+        padding: 20px 0;
+    }
+    p{
+        font-size: var(--fs-body);
+        color: var(--color-light-gray);
+        padding: 0 8px;
+    }
+}
+.select-amount{
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: var(--fs-h3);
+        color: var(--color-green);
+        text-align: center;
+        padding: 20px 0;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        gap:15px ;
+       margin-bottom: 40px;
+        div{
+            width: 125px;
+            height: 125px;
+            flex-wrap: wrap;
+            border-radius: 50%;
+            background-color: #222222;
+            transition: all 0.3s;
+            span{
+            color: var(--color-green);
             font-size: 30px;
-            color: var(--color-red);
-        }
-        h3{
-            color:var(--color-gray);
-            font-size: 20px;
-            padding: 10px 0;
-        }
-        p{
-            color:var(--color-light-gray);
-            font-size: 15px;
-            padding-bottom: 10px;
-        }
-        button{
-    width: 90px;
-    height: 35px;
-    font-size: 19px;
-    margin: 7px;
-    border-radius: 7px;
-    margin-bottom: 15px;
+            align-self: center;
+            transition: 0.3s;
+            }
         }
     }
 }
-@media (max-width: 992px) {
-    .donation-card {
-        width: 260px;
-    }
-    .donation-card span {
-        font-size: 26px;
-    }
+.select-amount div div:hover{
+    background-color:  rgba(139, 0, 0, 0.1);
+    transform: translateY(-7px);
 }
-@media (max-width: 768px) {
-    .donation-cards {
+.select-amount div div span:hover{
+    color: var(--color-red);
+}
+@media(max-width:1024px){
+    .donation-cards>div:first-child,.donation-cards>div:last-child{
         flex-direction: column;
+        gap: 20px;
         align-items: center;
-        gap: 25px;
     }
-    .donation-card {
+    .donation-card-1,.donation-card-2{
         width: 90%;
+        height: auto;
+        padding: 20px;
     }
-    .donation-card span {
-        font-size: 24px;
+    .donation-card-1 span,.donation-card-2 span{
+        font-size: 35px;
     }
-    .donation-card button {
-        width: 100px;
-        height: 38px;
-        font-size: 15px;
+    .select-amount div{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .select-amount div div{
+        width: 110px;
+        height: 110px;
+    }
+    .select-amount div div span{
+        font-size: 28px;
+    }
+}
+@media(max-width:768px){
+    .donation-cards>div:first-child,.donation-cards>div:last-child{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .donation-card-1,.donation-card-2{
+        width: 95%;
+        height: auto;
+        padding: 15px;
+    }
+    .donation-card-1 span,.donation-card-2 span{
+        font-size: 30px;
+    }
+    .select-amount div{
+        flex-direction: column;
+        gap: 10px;
+    }
+     .select-amount div div{
+        width: 90px;
+        height: 90px;
+    }
+     .select-amount div div span{
+        font-size: 25px;
     }
 }
 .action-sec4 {
-  /* background:#1f1a1a; */
+  background:var(--color-dark);
   padding: 80px 8%;
   width: 100%;
-  height: 70vh;
 }
 .organizations {
   display: flex;
@@ -214,24 +259,16 @@
   flex: 1;
   min-width: 280px;
  h2 {
-  margin-bottom: 40px;
-  color: var(--color-red);
+  margin-bottom: 30px;
+  color: var(--color-white);
   position: relative;
+  font-size: var(--fs-h2);
+  text-align: right;
 }
  p {
-  line-height: 1.8;
+  line-height: 1.9;
   color: var(--color-light-gray);
  }  
-}
-.organization-describtion h2::after {
-  content: "";
-  width: 350px;
-  height: 4px;
-  display: block;
-  background-color:var(--color-green);
-  position: absolute;
-  bottom: -10px;
-  right: 0;
 }
 .organizations-links {
   flex: 1; 
@@ -254,55 +291,44 @@
 }
 .orgs:hover {
   background-color: rgba(139, 0, 0, 0.1);
-  transform: translateX(-8px);
+  transform: translateX(-10px);
   border-color: var(--color-red);
 }
 .orgs:hover a {
   color: var(--color-red);
 }
-@media (max-width: 992px) {
-    .action-sec4 {
-        height: auto;
-        padding: 60px 5%;
-    }
-    .organizations {
+@media(max-width:1024px){
+    .organizations{
+        flex-direction: column;
         gap: 40px;
     }
-    .organization-describtion,.organizations-links {
-        min-width: 250px;
+    .organization-describtion,.organizations-links{
+        min-width: 100%;
     }
-    .orgs a {
+    .organization-describtion h2{
+        text-align: center;
+    }
+    .orgs{
         font-size: 18px;
     }
 }
-@media (max-width: 768px) {
-    .action-sec4 {
-        padding: 60px 4%;
-        height: auto;
-    }
-    .organizations {
+@media(max-width:768px){
+    .organizations{
         flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
+        gap: 30px;
     }
-    .organization-describtion,.organizations-links {
-        width: 100%;
+    .organizations-links{
+        gap: 15px;
     }
-    .organization-describtion h2::after {
-        width: 100%;
+    .organization-describtion h2{
+        text-align: right;
     }
-    .orgs {
-        padding: 15px 15px;
-    }
-    .orgs:hover {
-        border-color: var(--color-red);
-    }
-    .orgs a {
-        font-size: 16px;
+    .orgs{
+        font-size: 18px;
     }
 }
 .action-sec5 {
-  /* background-color: #1f1a1a; */
+  background-color:var(--color-dark);
   padding: 80px 0;
   color: var(--color-white);
 }
@@ -322,36 +348,20 @@
 }
 .project-goals h2 {
   font-size: var(--fs-h2);
-  color: var(--color-red);
-  margin-bottom: 30px;
+  color: var(--color-white);
+  margin-bottom: 20px;
   position: relative;
-}
-.project-goals h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  width: 255px;
-  height: 4px;
-  background:var(--color-green);
+  text-align: right;
 }
 .project-goals ul {
   list-style: none;
   padding-right: 0;
 }
 .project-goals ul li {
-  margin-bottom: 15px;
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  color: #ddd;
-  position: relative;
-  padding-right: 20px;
-}
-.project-goals ul li {
   position: relative; 
-  padding-right: 30px; 
-  margin-bottom: 15px;
-  line-height: 1.8;
+  padding-right: 22px; 
+  margin-bottom: 12px;
+  line-height: 1.7;
   font-size: var(--fs-body);
   color: var(--color-light-gray);
 }
@@ -359,16 +369,16 @@
   content: "";
   position: absolute;
   right: 0;
-  top: 50%;
+  top:17px;
   transform: translateY(-50%); 
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--color-red);
+  width: 9px;
+  height: 9px;
+  border: 3px solid var(--color-green);
   background: transparent;
 }
 .project-goals .image-for-goals {
   flex: 1;
-  min-width: 300px;
+  min-width: 350px;
   text-align: center;
 }
 .project-goals .image-for-goals img {
@@ -378,71 +388,189 @@
   transition: transform 0.3s ease;
 }
 .project-goals .image-for-goals img:hover {
-  transform: scale(1.05);
+  transform: scale(1.13);
 }
-@media (max-width: 1024px) {
-  .project-goals {
-    gap: 30px;
-  }
+@media(max-width:1024px){
+    .project-goals{
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .project-goals .goals , .project-goals .image-for-goals{
+        min-width: 80%;
+        text-align: center;
+    }
+    .project-goals ul li{
+        padding-right: 18px;
+    }
+    .project-goals ul li::before{
+        width: 7px;
+        height: 7px;
+        border-width: 2px;
+    }
+    .project-goals .image-for-goals{
+        max-width: 90%;
+    }
 }
-@media (max-width: 768px) {
-  .project-goals {
-    flex-direction: column; 
+@media(max-width:768px){
+    .project-goals{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 20px 10px;
+    }
+    .project-goals .goals , .project-goals .image-for-goals{
+        min-width: 95%;
+        text-align: center;
+    }
+    .project-goals ul li{
+        padding-right: 13px;
+    }
+    .project-goals ul li::before{
+        width: 5px;
+        height: 5px;
+        border-width: 2px;
+    }
+    .project-goals .image-for-goals{
+        max-width: 95%;
+    }
+}
+.action-sec6{
+    padding: 30px 10%;
+    background-color:var(--color-dark);
+}
+ h2{
     text-align: center;
-  }
-  .project-goals .goals {
+    margin-bottom: 40px;
+    font-size: var(--fs-h2);
+    color: var(--color-white);
+}
+.contact-cards{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+.contact-card{
+    flex: 1;
+    background:#222222 ;
+    color:var(--color-white);
+    padding: 30px;
+    border: 2px solid var(--color-green);
+    border-radius: 15px;
     text-align: center;
-  }
 }
-.action-sec6 {
-  /* background-color: #1f1a1a; */
-  padding: 50px 0;
-  text-align: center;
-  color: var(--color-white);
+.contact-card i{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--color-green);
 }
-.action-sec6 h2 {
-  font-size: var(--fs-h2);
-  color: var(--color-red);
-  margin-bottom: 50px;
-  position: relative;
-  display: inline-block;
+.contact-card h4{
+    margin-bottom: 10px;
 }
-.action-sec6 h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  width: 185px;
-  height: 4px;
-  background:var(--color-green);
+.contact-card a{
+    color:var(--color-gray);
+    text-decoration: none;
 }
-.action-sec6 form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    h3{
+        color: var(--color-green);
+        margin-bottom: 15px;
+        font-size: var(--fs-h3);
+    }
+    p{
+        color: var(--color-light-gray);
+        line-height: 1.5;
+        margin-bottom: 18px;
+        font-size: var(--fs-body);
+    }
+    i{
+        font-size: 40px;
+        color: var(--color-green);
+    }
 }
-.action-sec6 input,.action-sec6 textarea {
-  width: 100%;
-  padding: 15px 20px;
-  border-radius: var(--radius);
-  border: 2px solid var(--color-green);
-  background-color: #1c1c1c;
-  color:var(--color-white);
-  font-size: var(--fs-body);
-  transition: 0.3s ease;
+.contact-form>div:first-child{flex: 1;}
+.contact-form>div:last-child{flex: 1;}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
-.action-sec6 input:focus,.action-sec6 textarea:focus {
-  outline: none;
-  border-color:var(--color-red);
+form input,form textarea{
+    padding: 14px;
+    border: 2px solid var(--color-green);
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    background-color: #222222;
+    color: var(--color-white);
+    transition: 0.3s;
 }
-.action-sec6 button {
-  width: 150px;
-  height: 50px;
-  font-size: 30px;
-  border-radius: var(--radius);
-  align-self: center;
-  margin-top: 10px;
-  transition: 0.3s ease;
+form input:focus,form textarea:focus{
+    border-color: var(--color-red);
+}
+.btn-secondary{
+    padding: 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 25px;
+}
+@media(max-width:1024px){
+    .contact-cards{flex-direction: column;
+    gap: 20px;
+    align-items: center;}
+    .contact-card{
+        width: 80%;
+        text-align: center;
+    }
+    .contact-form{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .contact-form>div{
+        width: 100%;
+        text-align: center;
+    }
+    form{width: 100%;}
+    form input,form textarea{
+        width: 100%;
+    }
+    .contact-form i{
+        font-size: 35px;
+    }
+}
+@media(max-width:768px){
+    .contact-cards{flex-direction: column;
+    gap: 15px;
+    align-items: center;}
+    .contact-card{
+        width: 95%;
+        padding: 20px;
+        text-align: center;
+    }
+    .contact-form{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .contact-form>div{
+        width: 100%;
+        text-align: center;
+    }
+    form{width: 100%;}
+    form input,form textarea{
+        width: 100%;
+        padding: 12px;
+    }
+    .contact-form i{
+        font-size: 25px;
+    }
+    .btn-secondary{
+        font-size: 20px;
+        padding: 10px;
+    }
 }
