@@ -45,7 +45,6 @@
   /* Transition */
   --transition: 0.3s ease;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -74,17 +73,14 @@ h2 {
   font-size: var(--fs-h2);
   font-weight: 700;
 }
-
 h3 {
   font-size: var(--fs-h3);
   font-weight: 600;
 }
-
 p {
   font-size: var(--fs-body);
   color: var(--color-gray);
 }
-
 /* Buttons */
 .btn {
   display: inline-block;
