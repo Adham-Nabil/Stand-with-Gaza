@@ -27,15 +27,11 @@
         color: var(--color-light-gray);
         margin-bottom: 30px;
     }
-    a{
-        text-decoration: none;
-        color:var(--color-white);
-        font-size: 24px;
-        border-radius: 34px;
-        padding: 6px 9px;
-        margin: 5px 5px;
-    }
 }
+ .buttons{
+        display: flex;
+        gap: 20px;
+    }
 .action-sec1::after{
     content: "";
     position: absolute;
@@ -70,9 +66,10 @@
         transition: transform 0.3s , box-shadow 0.3s;
         text-align: center;
         img{
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+            width: 172px;
+            height: 130px;
+            border-radius: 50px;
+            object-fit: cover;
             margin-top: 20px;
         }
         h3{
@@ -90,161 +87,178 @@
 }
 .help-card:hover{
     transform: translateY(-10px);
-    box-shadow: 6px 6px 25px rgb(88, 13, 13);
+    box-shadow: 0 0 40px rgb(225, 6, 0,0.2);
 }
 .action-sec3{
     background-color: var(--color-dark);
-    h2{
-        font-size: var(--fs-h2);
-        color: var(--color-white);
-        text-align: center;
-    }
+    padding: 20px 10%;
+}
+.action-sec3 h2{
+    font-size: var(--fs-h2);
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 40px;
 }
 .donation-cards{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
-.donation-cards>div:first-child{
-    flex: 1;
+.donation-cards > div{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-.donation-cards>div:last-child{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 25px;
-}
-.donation-card-1{
-    width: 365px;
-    height: 200px;
-    background-color: #222222;
-    text-align: center;
-    border-radius: 9px;
-    span{
-        font-size: 40px;
-        color: var(--color-green);
-        padding: 20px 0;
-    }
-    p{
-        font-size: var(--fs-body);
-        color: var(--color-gray);
-        padding: 0 8px;
-    }
-}
-.donation-card-2{
-    max-width: 560px;
+.donation-card{
     width: 100%;
-    height: 200px;
+    max-width: 230px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     background-color: #222222;
     text-align: center;
     border-radius: 9px;
-    span{
-        font-size: 40px;
-        color: var(--color-green);
-        padding: 20px 0;
-    }
-    p{
-        font-size: var(--fs-body);
-        color: var(--color-gray);
-        padding: 0 8px;
-    }
+    padding: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.donation-card span{
+    font-size: 40px;
+    color: var(--color-green);
+    display: block;
+    padding: 5px 0;
+    word-wrap: break-word;
+}
+.donation-card p{
+    font-size: var(--fs-body);
+    color: var(--color-gray);
+    padding: 5px 5px;
+}
+.donation-card i{
+    font-size: 45px;
+    color: var(--color-green);
+    padding: 5px 0;
+    align-self: center;
+}
+.donation-card:hover{
+    box-shadow: 0 0 30px rgba(225, 6, 0,0.2);
+    transform: translateY(-8px);
 }
 .select-amount{
     display: flex;
     flex-direction: column;
-    h3{
-        font-size: var(--fs-h3);
-        color: var(--color-green);
-        text-align: center;
-        padding: 20px 0;
-    }
-    div {
-        display: flex;
-        justify-content: center;
-        gap:15px ;
-       margin-bottom: 40px;
-        div{
-            width: 125px;
-            height: 125px;
-            flex-wrap: wrap;
-            border-radius: 50%;
-            background-color: #222222;
-            transition: all 0.3s;
-            span{
-            color: var(--color-green);
-            font-size: 30px;
-            align-self: center;
-            transition: 0.3s;
-            }
-        }
-    }
+    gap: 10px;
+    margin-top: 20px;
 }
-.select-amount div div:hover{
-    background-color:  rgba(139, 0, 0, 0.1);
-    transform: translateY(-7px);
+.select-amount h3{
+    font-size: var(--fs-h3);
+    color: var(--color-green);
+    text-align: center;
+    padding: 20px 0;
 }
-.select-amount div div:hover span{
+.select-amount div{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.amount-circle{
+    width: 160px;
+    height: 120px;
+    border-radius: 40px;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border:2px solid transparent;
+}
+.amount-circle span{
+    color: var(--color-green);
+    font-size: 35px;
+    text-align: center;
+    transition: color 0.3s;
+}
+.amount-circle:focus{
+    background-color: rgba(139, 0, 0, 0.13);
+    border: 2px solid rgba(171, 47, 47, 0.6);
+}
+.amount-circle:focus span{
     color: var(--color-red);
 }
 @media(max-width:1024px){
-    .donation-cards>div:first-child,.donation-cards>div:last-child{
-        flex-direction: column;
+    .donation-cards > div{
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 20px;
         align-items: center;
+        margin: 0 auto;
     }
-    .donation-card-1,.donation-card-2{
+    .donation-card{
         width: 90%;
-        height: auto;
-        padding: 20px;
+        font-size: 14px;
+        padding: 15px;
     }
-    .donation-card-1 span,.donation-card-2 span{
+    .donation-card span{
         font-size: 35px;
     }
+    .donation-card p{
+        font-size: 15px;
+    }
     .select-amount div{
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
         align-items: center;
     }
-    .select-amount div div{
+    .amount-circle{
         width: 110px;
         height: 110px;
     }
-    .select-amount div div span{
+    .amount-circle span{
         font-size: 28px;
     }
 }
+
 @media(max-width:768px){
-    .donation-cards>div:first-child,.donation-cards>div:last-child{
-        flex-direction: column;
+    .donation-cards > div{
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 15px;
         align-items: center;
+        margin: 0 auto;
     }
-    .donation-card-1,.donation-card-2{
+    .donation-card{
         width: 95%;
-        height: auto;
-        padding: 15px;
+        padding: 10px;
     }
-    .donation-card-1 span,.donation-card-2 span{
+    .donation-card span{
         font-size: 30px;
     }
-    .select-amount div{
-        flex-direction: column;
-        gap: 10px;
+    .donation-card p{
+        font-size: 12px;
     }
-     .select-amount div div{
+    .select-amount div{
+        flex-direction: row;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .amount-circle{
         width: 90px;
         height: 90px;
     }
-     .select-amount div div span{
-        font-size: 25px;
+    .amount-circle span{
+        font-size: 20px;
     }
 }
 .action-sec4 {
   background:var(--color-dark);
-  padding: 80px 8%;
+  padding: 60px 8%;
   width: 100%;
 }
 .organizations {
@@ -287,7 +301,7 @@
   align-items: center;
   span{
     color: var(--color-white);
-    font-size: 30px;
+    font-size: 24px;
     transition: 0.3s;
   }
 img{
@@ -316,7 +330,7 @@ img{
         text-align: center;
     }
     .orgs{
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 @media(max-width:768px){
@@ -331,7 +345,7 @@ img{
         text-align: right;
     }
     .orgs{
-        font-size: 18px;
+        font-size: 10px;
     }
 }
 .action-sec5 {
@@ -395,7 +409,7 @@ img{
   transition: transform 0.3s ease;
 }
 .project-goals .image-for-goals img:hover {
-  transform: scale(1.13);
+  transform: scale(1.07);
 }
 @media(max-width:1024px){
     .project-goals{
@@ -466,6 +480,12 @@ img{
     border: 2px solid var(--color-green);
     border-radius: 15px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+.contact-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 30px var(--color-green);
+    border:none;
 }
 .contact-card i{
     font-size: 40px;
@@ -478,6 +498,7 @@ img{
 .contact-card a{
     color:var(--color-gray);
     text-decoration: none;
+    font-size: 20px;
 }
 .contact-form{
     display: flex;
@@ -495,10 +516,14 @@ img{
         margin-bottom: 18px;
         font-size: var(--fs-body);
     }
-    i{
-        font-size: 40px;
+    a i{
+        font-size: 45px;
         color: var(--color-green);
+        transition: all 0.3s ease;
     }
+}
+.contact-form a i:hover{
+    transform: translateY(-5px);
 }
 .contact-form>div:first-child{flex: 1;}
 .contact-form>div:last-child{flex: 1;}
