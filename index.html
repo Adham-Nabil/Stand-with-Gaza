@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stand with Gaza</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,21 +22,323 @@
     />
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <h1>اهلا و سهلا</h1>
-      <h2>اهلا و سهلا</h2>
-      <h3>اهلا و سهلا</h3>
-      <h4>اهلا و سهلا</h4>
-      <p>السلام عليكم و رحمة الله و بركاته</p>
-      <span>السلام عليكم و رحمة الله و بركاته</span>
-      <a href="#" class="btn btn-primary">ادعم الآن</a>
+    <div id="top"></div>
 
-      <a href="#" class="btn btn-secondary">اقرأ المزيد</a>
+    <!-- Header -->
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="lang-dropdown">
+          <button class="lang-btn">
+            <i class="fa-solid fa-globe"></i>
+            العربية
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="lang-menu">
+            <a href="#" class="active">العربية (ع)</a>
+            <a href="#">English (EN)</a>
+          </div>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-links">
+          <a href="./index.html" class="active">الرئيسية</a>
+          <a href="./impacts.html">التأثيرات</a>
+          <a href="./stories.html">قصص</a>
+          <a href="./action.html">اتخذ موقف</a>
+          <div class="lang-dropdown mobile">
+            <button class="lang-btn">
+              <i class="fa-solid fa-globe"></i>
+              العربية
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="lang-menu">
+              <a href="#" class="active">العربية (ع)</a>
+              <a href="#">English (EN)</a>
+            </div>
+          </div>
+        </nav>
+
+        <a href="#" class="logo">
+          <span class="logo-text">
+            <span class="stand">Stand</span>
+            <span class="with">With</span>
+            <span class="gaza">Gaza</span>
+          </span>
+          <img src="./assets/logo.svg" alt="Stand With Gaza" />
+        </a>
+      </div>
     </header>
+
     <!-- Content -->
-    <main></main>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-smoke"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <span class="tagline">Stand With Gaza</span>
+          <h1>معًا نقف مع غزة</h1>
+          <p>صوت الحقيقة. دعم الإنسان. تحرك الآن.</p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">تبرع الآن</a>
+            <a href="#" class="btn btn-outline">اعرف المزيد</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Crisis Section -->
+      <section class="section crisis" id="crisis">
+        <div class="container">
+          <div class="section-header">
+            <h2>الأزمة في أرقام</h2>
+            <p>نظرة سريعة على حجم الكارثة الإنسانية في غزة</p>
+          </div>
+
+          <div class="crisis-grid">
+            <div class="crisis-card">
+              <span class="crisis-number">20,000+</span>
+              <span class="crisis-label">شهيد</span>
+              <p class="crisis-extra">أرواح أُزهقت بلا ذنب</p>
+            </div>
+
+            <div class="crisis-card">
+              <span class="crisis-number">1.5M</span>
+              <span class="crisis-label">نازح</span>
+              <p class="crisis-extra">بلا مأوى أو أمان</p>
+            </div>
+
+            <div class="crisis-card">
+              <span class="crisis-number">70%</span>
+              <span class="crisis-label">منازل مدمرة</span>
+              <p class="crisis-extra">أحياء كاملة سويت بالأرض</p>
+            </div>
+
+            <div class="crisis-card">
+              <span class="crisis-number">60%</span>
+              <span class="crisis-label">مستشفيات خارج الخدمة</span>
+              <p class="crisis-extra">الجرحى بلا علاج</p>
+            </div>
+
+            <div class="crisis-card">
+              <span class="crisis-number">80%</span>
+              <span class="crisis-label">يعتمدون على المساعدات</span>
+              <p class="crisis-extra">الجوع يطرق كل باب</p>
+            </div>
+
+            <div class="crisis-card">
+              <span class="crisis-number">50%</span>
+              <span class="crisis-label">أطفال</span>
+              <p class="crisis-extra">طفولة تُقصف كل يوم</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Problems Section -->
+      <section class="section problems" id="problems">
+        <div class="container">
+          <div class="section-header">
+            <h2>المشكلات الأساسية</h2>
+            <p>جذور الأزمة التي تؤثر على حياة المدنيين يومًا بعد يوم</p>
+          </div>
+
+          <!-- Problem 1 -->
+          <div class="problem-row">
+            <div class="problem-text">
+              <span class="problem-number">01</span>
+              <h3>تدمير البنية التحتية</h3>
+              <p>
+                أضرار واسعة لحقت بالمباني السكنية والطرق والمنشآت الحيوية، مما
+                أدى إلى شلل في شبكات النقل والخدمات الأساسية.
+              </p>
+              <a href="impacts.html#infrastructure" class="problem-link">
+                استكشف التأثير →
+              </a>
+            </div>
+
+            <div class="problem-image">
+              <img
+                src="./assets/home/problem1.jpg"
+                alt="Damaged buildings and infrastructure"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="problem-row reverse">
+            <div class="problem-text">
+              <span class="problem-number">02</span>
+              <h3>تأثر القطاع الصحي والتعليمي</h3>
+              <p>
+                مستشفيات تعمل بقدرة محدودة ونقص حاد في الإمدادات، ومدارس مغلقة
+                أو متضررة تحرم آلاف الأطفال من حقهم في التعليم.
+              </p>
+              <a href="impacts.html#health-education" class="problem-link">
+                استكشف التأثير →
+              </a>
+            </div>
+
+            <div class="problem-image">
+              <img
+                src="./assets/home/problem2.jpg"
+                alt="Hospital and school damage"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Problem 3 -->
+          <div class="problem-row">
+            <div class="problem-text">
+              <span class="problem-number">03</span>
+              <h3>انقطاع الخدمات والاحتياجات الأساسية</h3>
+              <p>
+                نقص حاد في الغذاء والمياه والكهرباء والوقود، مما يهدد الأمن
+                الإنساني ويجعل الحياة اليومية في غاية الصعوبة.
+              </p>
+              <a href="impacts.html#utilities" class="problem-link">
+                استكشف التأثير →
+              </a>
+            </div>
+
+            <div class="problem-image">
+              <img
+                src="./assets/home/problem3.jpg"
+                alt="Shortage of food and water"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stories Section -->
+      <section class="section stories" id="stories">
+        <div class="container">
+          <div class="section-header">
+            <h2>قصص إنسانية</h2>
+            <p>وجوه حقيقية تعكس أثر الأزمة على الحياة اليومية</p>
+          </div>
+
+          <div class="stories-grid">
+            <!-- Story 1 -->
+            <div class="story-card">
+              <div class="story-image">
+                <img
+                  src="./assets/home/story1.webp"
+                  alt="Child Escaping"
+                  loading="lazy"
+                />
+              </div>
+              <div class="story-content">
+                <h3>محمد المقيد – 15 عاماً</h3>
+                <p>
+                  حال بينه وبين الموت متر واحد، بينما طال أمه وإخوته وجدته
+                  واختطفهم جميعا دفعة واحدة، في حين قذفه الصاروخ بعيدا عنهم.
+                </p>
+                <a href="stories.html#mohammed" class="story-link">
+                  اقرأ القصة كاملة →
+                </a>
+              </div>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="story-card">
+              <div class="story-image">
+                <img
+                  src="./assets/home/story2.jpg"
+                  alt="Doctor volunteering"
+                  loading="lazy"
+                />
+              </div>
+              <div class="story-content">
+                <h3>أطباء غزة المتطوعون</h3>
+                <p>
+                  روى أطباء متطوعون عملوا في قطاع غزة الفلسطيني -الذي يتعرض لحرب
+                  إبادة إسرائيلية منذ أكثر من عام- مشاهد الرعب التي شاهدوها في
+                  عدد من مستشفيات القطاع.
+                </p>
+                <a href="stories.html#doctors" class="story-link">
+                  اقرأ القصة كاملة →
+                </a>
+              </div>
+            </div>
+
+            <!-- Story 3 -->
+            <div class="story-card">
+              <div class="story-image">
+                <img
+                  src="./assets/home/story3.webp"
+                  alt="Mother with children"
+                  loading="lazy"
+                />
+              </div>
+              <div class="story-content">
+                <h3>آلاء النجار – فقدت 9 من أولادها</h3>
+                <p>
+                  كانت الأم -التي تعمل طبيبة في مجمع ناصر الطبي- يملأ قلبها
+                  الأسى لما ترى من أهوال ومصائب وأجساد تحولت إلى مزع، قبل أن
+                  يكون قلبها المفعم حبا مسرحا لحرقة لا تنتهي.
+                </p>
+                <a href="stories.html#alaa" class="story-link">
+                  اقرأ القصة كاملة →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="stories-cta">
+            <a href="stories.html" class="btn btn-outline"> عرض جميع القصص </a>
+          </div>
+        </div>
+      </section>
+      <!-- Action -->
+      <section class="section action" id="action">
+        <div class="container action-wrapper">
+          <div class="action-main">
+            <div class="action-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <h2>اتخذ خطوة الآن</h2>
+            <p>كل مساهمة، مهما كانت بسيطة، يمكن أن تنقذ حياة.</p>
+
+            <a href="./action.html" class="btn btn-primary action-donate">
+              تبرع الآن
+            </a>
+          </div>
+
+          <div class="action-support">
+            <div class="support-item">
+              <i class="fa-solid fa-share-nodes support-icon"></i>
+              <h3>انشر الوعي</h3>
+              <p>شارك المعلومات والقصص لدعم إيصال الصوت.</p>
+              <a href="action.html#spread-awareness">شارك الآن →</a>
+            </div>
+
+            <div class="support-item">
+              <i class="fa-solid fa-shield-heart support-icon"></i>
+              <h3>منظمات موثوقة</h3>
+              <p>اطلع على الجهات الإنسانية التي تقدم الدعم المباشر.</p>
+              <a href="action.html#trusted-orgs">عرض المنظمات →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer></footer>
+    <a href="#top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa-solid fa-caret-down"></i>
+    </a>
   </body>
 </html>
