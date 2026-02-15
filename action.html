@@ -22,7 +22,59 @@
   </head>
   <body>
     <!-- Header -->
-    <header></header>
+    <div id="top"></div>
+
+    <!-- Header -->
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="lang-dropdown">
+          <button class="lang-btn">
+            <i class="fa-solid fa-globe"></i>
+            العربية
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="lang-menu">
+            <a href="#" class="active">العربية (ع)</a>
+            <a href="#">English (EN)</a>
+          </div>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-links">
+          <a href="./index.html">الرئيسية</a>
+          <a href="./impacts.html">التأثيرات</a>
+          <a href="./stories.html">قصص</a>
+          <a href="./action.html" class="active">اتخذ موقف</a>
+          <div class="lang-dropdown mobile">
+            <button class="lang-btn">
+              <i class="fa-solid fa-globe"></i>
+              العربية
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="lang-menu">
+              <a href="#" class="active">العربية (ع)</a>
+              <a href="#">English (EN)</a>
+            </div>
+          </div>
+        </nav>
+
+        <a href="#" class="logo">
+          <span class="logo-text">
+            <span class="stand">Stand</span>
+            <span class="with">With</span>
+            <span class="gaza">Gaza</span>
+          </span>
+          <img src="./assets/logo.svg" alt="Stand With Gaza" />
+        </a>
+      </div>
+    </header>
     <!-- Content -->
     <main>
        <!-- section1 start -->
@@ -138,10 +190,10 @@
     <div class="goals">
       <h2>أهداف المشروع</h2>
       <ul>
-        <li>التوعية ونقل الحقيقة:نسعى إلى تقديم صورة واضحة وموثوقة عن الأوضاع في غزة، من خلال عرض الحقائق والتأثيرات الإنسانية بشكل موضوعي وإنساني.</li>
-        <li>التوثيق وسرد القصص الإنسانية:نعمل على توثيق قصص حقيقية تعكس معاناة الأفراد والأسر، لننقل أصواتهم إلى العالم.</li>
-        <li>تقديم الدعم المعنوي والمجتمعي:نؤمن بأهمية الدعم النفسي والمعنوي إلى جانب الدعم المادي. لذلك نسعى إلى خلق مساحة تضامن وتفاعل تُشعر أهل غزة بأنهم ليسوا وحدهم.</li>
-        <li>تشجيع التبرع والمساهمة الفعّالة:نهدف إلى تحفيز الأفراد على المساهمة المالية لدعم الأسر المتضررة والمشاريع الإنسانية.</li>
+        <li>التوعية ونقل الحقيقة: نسعى إلى تقديم صورة واضحة وموثوقة عن الأوضاع في غزة، من خلال عرض الحقائق والتأثيرات الإنسانية بشكل موضوعي وإنساني.</li>
+        <li>التوثيق وسرد القصص الإنسانية: نعمل على توثيق قصص حقيقية تعكس معاناة الأفراد والأسر، لننقل أصواتهم إلى العالم.</li>
+        <li>تقديم الدعم المعنوي والمجتمعي: نؤمن بأهمية الدعم النفسي والمعنوي إلى جانب الدعم المادي. لذلك نسعى إلى خلق مساحة تضامن وتفاعل تُشعر أهل غزة بأنهم ليسوا وحدهم.</li>
+        <li>تشجيع التبرع والمساهمة الفعّالة: نهدف إلى تحفيز الأفراد على المساهمة المالية لدعم الأسر المتضررة والمشاريع الإنسانية.</li>
       </ul>
     </div>
     <div class="image-for-goals">
@@ -197,5 +249,8 @@
     </main>
     <!-- Footer -->
     <footer></footer>
+    <a href="#top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa-solid fa-caret-down"></i>
+    </a>
   </body>
 </html>

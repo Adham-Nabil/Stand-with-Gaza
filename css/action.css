@@ -1,263 +1,275 @@
-.action-sec1{
-    width: 100%;
-    min-height:100vh;
-    padding: 0 20px;
-    background-image: url(../assets/action.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.action-sec1 {
+  width: 100%;
+  min-height: 90vh;
+  padding: 0 20px;
+  background-image: url(../assets/action.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  overflow: hidden;
+  h1,
+  p,
+  .buttons {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--color-white);
-    overflow: hidden;
-    h1, p, .buttons{
-        position: relative;
-        z-index: 2;
-    }
-    h1{
+    z-index: 2;
+  }
+  h1 {
     font-size: var(--fs-h1);
     margin-bottom: 20px;
-    }
-    p{
-        font-size:var(--fs-body);
-        color: var(--color-light-gray);
-        margin-bottom: 30px;
-    }
+  }
+  p {
+    font-size: var(--fs-body);
+    color: var(--color-light-gray);
+    margin-bottom: 30px;
+  }
 }
- .buttons{
-        display: flex;
-        gap: 20px;
-    }
-.action-sec1::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.83);
-    z-index: 1;
+.buttons {
+  display: flex;
+  gap: 20px;
 }
-.action-sec2{
-    background-color:var(--color-dark);
-    text-align: center;
-    width: 100%;
-    min-height: 65vh;
-    padding: 60px 20px;
-    h2{
-        font-size: var(--fs-h2);
-        color: var(--color-white);
-        padding-bottom: 20px;
-    }
-    .help-cards{
-        display: flex;
-        gap: 45px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .help-card{
-        background-color: #222222;
-        border-radius: var(--radius-lg);
-        width: 350px;
-        transition: transform 0.3s , box-shadow 0.3s;
-        text-align: center;
-        img{
-            width: 172px;
-            height: 130px;
-            border-radius: 50px;
-            object-fit: cover;
-            margin-top: 20px;
-        }
-        h3{
-            font-size: var(--fs-h3);
-            color:var(--color-green);
-            padding: 5px;
-        }
-        p{
-            font-size:var(--fs-body);
-            color:var(--color-gray);
-            line-height: 1.5;
-            padding:5px 10px 15px 10px;
-        }
-    }
+.action-sec1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.83);
+  z-index: 1;
 }
-.help-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 0 40px rgb(225, 6, 0,0.2);
-}
-.action-sec3{
-    background-color: var(--color-dark);
-    padding: 20px 10%;
-}
-.action-sec3 h2{
+.action-sec2 {
+  background-color: var(--color-dark);
+  text-align: center;
+  width: 100%;
+  min-height: 65vh;
+  padding: 60px 20px;
+  h2 {
     font-size: var(--fs-h2);
     color: var(--color-white);
-    text-align: center;
-    margin-bottom: 40px;
-}
-.donation-cards{
+    padding-bottom: 20px;
+  }
+  .help-cards {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.donation-cards > div{
-    display: flex;
+    gap: 45px;
     justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
+  }
+  .help-card {
+    background-color: #222222;
+    border-radius: var(--radius-lg);
+    width: 350px;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    img {
+      width: 172px;
+      height: 130px;
+      border-radius: 50px;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+    h3 {
+      font-size: var(--fs-h3);
+      color: var(--color-green);
+      padding: 5px;
+    }
+    p {
+      font-size: var(--fs-body);
+      color: var(--color-gray);
+      line-height: 1.5;
+      padding: 5px 10px 15px 10px;
+    }
+  }
+}
+.help-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgb(225, 6, 0, 0.2);
+  border-color: var(--color-red);
+}
+.action-sec3 {
+  background-color: var(--color-dark);
+  padding: 20px 10%;
+}
+.action-sec3 h2 {
+  font-size: var(--fs-h2);
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.donation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.donation-cards > div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.donation-card {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  text-align: center;
+  border-radius: 9px;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.donation-card span {
+  font-size: 40px;
+  color: var(--color-green);
+  display: block;
+  padding: 5px 0;
+  word-wrap: break-word;
+}
+.donation-card p {
+  font-size: var(--fs-body);
+  color: var(--color-gray);
+  padding: 5px 5px;
+}
+.donation-card i {
+  font-size: 45px;
+  color: var(--color-green);
+  padding: 5px 0;
+  align-self: center;
+}
+.donation-card:hover {
+  border-color: var(--color-red);
+  box-shadow: 0 0 30px rgba(225, 6, 0, 0.2);
+  transform: translateY(-8px);
+}
+.select-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.select-amount h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px 0;
+}
+.select-amount div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.amount-circle {
+  width: 160px;
+  height: 120px;
+  border-radius: 40px;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.amount-circle span {
+  color: var(--color-green);
+  font-size: 35px;
+  text-align: center;
+  transition: color 0.3s;
+}
+.amount-circle:hover {
+  background-color: rgba(139, 0, 0, 0.13);
+}
+.amount-circle:focus {
+  border: 2px solid rgba(171, 47, 47, 0.6);
+  background-color: rgba(139, 0, 0, 0.13);
+}
+.amount-circle:focus span {
+  color: var(--color-red);
+}
+@media (max-width: 1024px) {
+  .donation-cards > div {
     flex-direction: row;
-}
-.donation-card{
-    width: 100%;
-    max-width: 230px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #222222;
-    text-align: center;
-    border-radius: 9px;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-.donation-card span{
-    font-size: 40px;
-    color: var(--color-green);
-    display: block;
-    padding: 5px 0;
-    word-wrap: break-word;
-}
-.donation-card p{
-    font-size: var(--fs-body);
-    color: var(--color-gray);
-    padding: 5px 5px;
-}
-.donation-card i{
-    font-size: 45px;
-    color: var(--color-green);
-    padding: 5px 0;
-    align-self: center;
-}
-.donation-card:hover{
-    box-shadow: 0 0 30px rgba(225, 6, 0,0.2);
-    transform: translateY(-8px);
-}
-.select-amount{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-.select-amount h3{
-    font-size: var(--fs-h3);
-    color: var(--color-green);
-    text-align: center;
-    padding: 20px 0;
-}
-.select-amount div{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-.amount-circle{
-    width: 160px;
-    height: 120px;
-    border-radius: 40px;
-    background-color: #222222;
-    display: flex;
-    justify-content: center;
+    gap: 20px;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    border:2px solid transparent;
-}
-.amount-circle span{
-    color: var(--color-green);
+    margin: 0 auto;
+  }
+  .donation-card {
+    width: 90%;
+    font-size: 14px;
+    padding: 15px;
+  }
+  .donation-card span {
     font-size: 35px;
-    text-align: center;
-    transition: color 0.3s;
-}
-.amount-circle:focus{
-    background-color: rgba(139, 0, 0, 0.13);
-    border: 2px solid rgba(171, 47, 47, 0.6);
-}
-.amount-circle:focus span{
-    color: var(--color-red);
-}
-@media(max-width:1024px){
-    .donation-cards > div{
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .donation-card{
-        width: 90%;
-        font-size: 14px;
-        padding: 15px;
-    }
-    .donation-card span{
-        font-size: 35px;
-    }
-    .donation-card p{
-        font-size: 15px;
-    }
-    .select-amount div{
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-    }
-    .amount-circle{
-        width: 110px;
-        height: 110px;
-    }
-    .amount-circle span{
-        font-size: 28px;
-    }
+  }
+  .donation-card p {
+    font-size: 15px;
+  }
+  .select-amount div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .amount-circle {
+    width: 110px;
+    height: 110px;
+  }
+  .amount-circle span {
+    font-size: 28px;
+  }
 }
 
-@media(max-width:768px){
-    .donation-cards > div{
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .donation-card{
-        width: 95%;
-        padding: 10px;
-    }
-    .donation-card span{
-        font-size: 30px;
-    }
-    .donation-card p{
-        font-size: 12px;
-    }
-    .select-amount div{
-        flex-direction: row;
-        gap: 5px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .amount-circle{
-        width: 90px;
-        height: 90px;
-    }
-    .amount-circle span{
-        font-size: 20px;
-    }
+@media (max-width: 768px) {
+  .donation-cards > div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .donation-card {
+    width: 95%;
+    padding: 10px;
+  }
+  .donation-card span {
+    font-size: 30px;
+  }
+  .donation-card p {
+    font-size: 12px;
+  }
+  .select-amount div {
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .amount-circle {
+    width: 90px;
+    height: 90px;
+  }
+  .amount-circle span {
+    font-size: 20px;
+  }
 }
 .action-sec4 {
-  background:var(--color-dark);
+  background: var(--color-dark);
   padding: 60px 8%;
   width: 100%;
 }
@@ -271,20 +283,20 @@
 .organization-describtion {
   flex: 1;
   min-width: 280px;
- h2 {
-  margin-bottom: 30px;
-  color: var(--color-white);
-  position: relative;
-  font-size: var(--fs-h2);
-  text-align: right;
-}
- p {
-  line-height: 2;
-  color: var(--color-gray);
- }  
+  h2 {
+    margin-bottom: 30px;
+    color: var(--color-white);
+    position: relative;
+    font-size: var(--fs-h2);
+    text-align: right;
+  }
+  p {
+    line-height: 2;
+    color: var(--color-gray);
+  }
 }
 .organizations-links {
-  flex: 1; 
+  flex: 1;
   min-width: 280px;
   display: flex;
   flex-direction: column;
@@ -293,22 +305,22 @@
 .orgs {
   border-right: 4px solid var(--color-green);
   padding: 20px;
-  background-color: rgba(255,255,255,0.03);
+  background-color: rgba(255, 255, 255, 0.03);
   transition: 0.3s ease;
   display: flex;
   gap: 25px;
   text-decoration: none;
   align-items: center;
-  span{
+  span {
     color: var(--color-white);
     font-size: 24px;
     transition: 0.3s;
   }
-img{
+  img {
     width: 65px;
     height: 65px;
     border-radius: 20px;
-}
+  }
 }
 .orgs:hover {
   background-color: rgba(139, 0, 0, 0.1);
@@ -318,38 +330,39 @@ img{
 .orgs:hover span {
   color: var(--color-red);
 }
-@media(max-width:1024px){
-    .organizations{
-        flex-direction: column;
-        gap: 40px;
-    }
-    .organization-describtion,.organizations-links{
-        min-width: 100%;
-    }
-    .organization-describtion h2{
-        text-align: center;
-    }
-    .orgs{
-        font-size: 15px;
-    }
+@media (max-width: 1024px) {
+  .organizations {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .organization-describtion,
+  .organizations-links {
+    min-width: 100%;
+  }
+  .organization-describtion h2 {
+    text-align: center;
+  }
+  .orgs {
+    font-size: 15px;
+  }
 }
-@media(max-width:768px){
-    .organizations{
-        flex-direction: column;
-        gap: 30px;
-    }
-    .organizations-links{
-        gap: 15px;
-    }
-    .organization-describtion h2{
-        text-align: right;
-    }
-    .orgs{
-        font-size: 10px;
-    }
+@media (max-width: 768px) {
+  .organizations {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .organizations-links {
+    gap: 15px;
+  }
+  .organization-describtion h2 {
+    text-align: right;
+  }
+  .orgs {
+    font-size: 10px;
+  }
 }
 .action-sec5 {
-  background-color:var(--color-dark);
+  background-color: var(--color-dark);
   padding: 80px 0;
   color: var(--color-white);
 }
@@ -365,7 +378,7 @@ img{
 .project-goals .goals {
   flex: 1;
   min-width: 300px;
-  text-align: right; 
+  text-align: right;
 }
 .project-goals h2 {
   font-size: var(--fs-h2);
@@ -379,8 +392,8 @@ img{
   padding-right: 0;
 }
 .project-goals ul li {
-  position: relative; 
-  padding-right: 22px; 
+  position: relative;
+  padding-right: 22px;
   margin-bottom: 12px;
   line-height: 1.7;
   font-size: var(--fs-body);
@@ -390,8 +403,8 @@ img{
   content: "";
   position: absolute;
   right: 0;
-  top:17px;
-  transform: translateY(-50%); 
+  top: 17px;
+  transform: translateY(-50%);
   width: 9px;
   height: 9px;
   border: 3px solid var(--color-green);
@@ -409,198 +422,216 @@ img{
   transition: transform 0.3s ease;
 }
 .project-goals .image-for-goals img:hover {
-  transform: scale(1.07);
+  transform: scale(1.02);
 }
-@media(max-width:1024px){
-    .project-goals{
-        flex-direction: column;
-        align-items: center;
-        gap: 35px;
-    }
-    .project-goals .goals , .project-goals .image-for-goals{
-        min-width: 80%;
-        text-align: center;
-    }
-    .project-goals ul li{
-        padding-right: 18px;
-    }
-    .project-goals ul li::before{
-        width: 7px;
-        height: 7px;
-        border-width: 2px;
-    }
-    .project-goals .image-for-goals{
-        max-width: 90%;
-    }
-}
-@media(max-width:768px){
-    .project-goals{
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        padding: 20px 10px;
-    }
-    .project-goals .goals , .project-goals .image-for-goals{
-        min-width: 95%;
-        text-align: center;
-    }
-    .project-goals ul li{
-        padding-right: 13px;
-    }
-    .project-goals ul li::before{
-        width: 5px;
-        height: 5px;
-        border-width: 2px;
-    }
-    .project-goals .image-for-goals{
-        max-width: 95%;
-    }
-}
-.action-sec6{
-    padding: 30px 10%;
-    background-color:var(--color-dark);
-}
- h2{
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: var(--fs-h2);
-    color: var(--color-white);
-}
-.contact-cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 60px;
-}
-.contact-card{
-    flex: 1;
-    background:#222222 ;
-    color:var(--color-white);
-    padding: 30px;
-    border: 2px solid var(--color-green);
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.contact-card:hover{
-    transform: scale(1.01);
-    box-shadow: 0 0 30px var(--color-green);
-    border:none;
-}
-.contact-card i{
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: var(--color-green);
-}
-.contact-card h4{
-    margin-bottom: 10px;
-}
-.contact-card a{
-    color:var(--color-gray);
-    text-decoration: none;
-    font-size: 20px;
-}
-.contact-form{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    h3{
-        color: var(--color-green);
-        margin-bottom: 15px;
-        font-size: var(--fs-h3);
-    }
-    p{
-        color: var(--color-gray);
-        line-height: 1.5;
-        margin-bottom: 18px;
-        font-size: var(--fs-body);
-    }
-    a i{
-        font-size: 45px;
-        color: var(--color-green);
-        transition: all 0.3s ease;
-    }
-}
-.contact-form a i:hover{
-    transform: translateY(-5px);
-}
-.contact-form>div:first-child{flex: 1;}
-.contact-form>div:last-child{flex: 1;}
-form{
-    display: flex;
+@media (max-width: 1024px) {
+  .project-goals {
     flex-direction: column;
-    gap: 18px;
+    align-items: center;
+    gap: 35px;
+  }
+  .project-goals .goals,
+  .project-goals .image-for-goals {
+    min-width: 80%;
+    text-align: center;
+  }
+  .project-goals ul li {
+    padding-right: 18px;
+  }
+  .project-goals ul li::before {
+    width: 7px;
+    height: 7px;
+    border-width: 2px;
+  }
+  .project-goals .image-for-goals {
+    max-width: 90%;
+  }
 }
-form input,form textarea{
-    padding: 14px;
-    border: 2px solid var(--color-green);
-    border-radius: 33px;
-    font-size: 15px;
-    outline: none;
-    background-color: #222222;
-    color: var(--color-white);
-    transition: 0.3s;
+@media (max-width: 768px) {
+  .project-goals {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 10px;
+  }
+  .project-goals .goals,
+  .project-goals .image-for-goals {
+    min-width: 95%;
+    text-align: center;
+  }
+  .project-goals ul li {
+    padding-right: 13px;
+  }
+  .project-goals ul li::before {
+    width: 5px;
+    height: 5px;
+    border-width: 2px;
+  }
+  .project-goals .image-for-goals {
+    max-width: 95%;
+  }
 }
-form input:focus,form textarea:focus{
-    border-color: var(--color-red);
+.action-sec6 {
+  padding: 30px 10%;
+  background-color: var(--color-dark);
 }
-.btn-block{
-    background-color: transparent;
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: var(--fs-h2);
+  color: var(--color-white);
 }
-@media(max-width:1024px){
-    .contact-cards{flex-direction: column;
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+.contact-card {
+  flex: 1;
+  background: #222222;
+  color: var(--color-white);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.contact-card:hover {
+  box-shadow: 0 0 20px rgba(0, 122, 61, 0.3);
+  border-color: var(--color-green);
+}
+.contact-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--color-green);
+}
+.contact-card h4 {
+  margin-bottom: 10px;
+}
+.contact-card a {
+  color: var(--color-gray);
+  text-decoration: none;
+  font-size: 20px;
+}
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  h3 {
+    color: var(--color-green);
+    margin-bottom: 15px;
+    font-size: var(--fs-h3);
+  }
+  p {
+    color: var(--color-gray);
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-size: var(--fs-body);
+  }
+  a i {
+    font-size: 32px;
+    color: var(--color-green);
+    transition: all 0.3s ease;
+  }
+}
+.contact-form a i:hover {
+  transform: translateY(-3px);
+  color: var(--color-red);
+}
+.contact-form > div:first-child {
+  flex: 1;
+}
+.contact-form > div:last-child {
+  flex: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+form input,
+form textarea {
+  padding: 14px;
+  border: 2px solid var(--color-green);
+  border-radius: 33px;
+  font-size: 15px;
+  outline: none;
+  background-color: #222222;
+  color: var(--color-white);
+  transition: 0.3s;
+}
+form input:focus,
+form textarea:focus {
+  border-color: var(--color-red);
+}
+.btn-block {
+  background-color: transparent;
+}
+@media (max-width: 1024px) {
+  .contact-cards {
+    flex-direction: column;
     gap: 20px;
-    align-items: center;}
-    .contact-card{
-        width: 80%;
-        text-align: center;
-    }
-    .contact-form{
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
-    .contact-form>div{
-        width: 100%;
-        text-align: center;
-    }
-    form{width: 100%;}
-    form input,form textarea{
-        width: 100%;
-    }
-    .contact-form i{
-        font-size: 35px;
-    }
+    align-items: center;
+  }
+  .contact-card {
+    width: 80%;
+    text-align: center;
+  }
+  .contact-form {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .contact-form > div {
+    width: 100%;
+    text-align: center;
+  }
+  form {
+    width: 100%;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+  }
+  .contact-form i {
+    font-size: 35px;
+  }
 }
-@media(max-width:768px){
-    .contact-cards{flex-direction: column;
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
     gap: 15px;
-    align-items: center;}
-    .contact-card{
-        width: 95%;
-        padding: 20px;
-        text-align: center;
-    }
-    .contact-form{
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-    .contact-form>div{
-        width: 100%;
-        text-align: center;
-    }
-    form{width: 100%;}
-    form input,form textarea{
-        width: 100%;
-        padding: 12px;
-    }
-    .contact-form i{
-        font-size: 25px;
-    }
-    .btn-secondary{
-        font-size: 20px;
-        padding: 10px;
-    }
+    align-items: center;
+  }
+  .contact-card {
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+  }
+  .contact-form {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .contact-form > div {
+    width: 100%;
+    text-align: center;
+  }
+  form {
+    width: 100%;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+  }
+  .contact-form i {
+    font-size: 25px;
+  }
+  .btn-secondary {
+    font-size: 20px;
+    padding: 10px;
+  }
 }
