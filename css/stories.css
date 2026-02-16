@@ -35,7 +35,6 @@ article {
   max-width: 50vw;
   border-left: medium double #333;
   border-bottom: medium double #333;
-  /* height: 88vh; */
   padding: 20px 0px;
 }
 
@@ -73,7 +72,7 @@ article h2 {
 .subheading {
   color: var(--color-green);
   font-size: 1.5625em;
-  max-width: 26em;
+  max-width: 28em;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 15px;
