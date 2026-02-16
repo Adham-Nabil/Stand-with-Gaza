@@ -6,12 +6,10 @@
   width: 100%;
   text-align: center;
 }
-
 .loading img {
   width: 60px;
   filter: invert(1) brightness(2);
 }
-
 .loading p {
   font-size: 30px;
   color: var(--color-white);
@@ -19,7 +17,6 @@
 .loading p span {
   color: var(--color-red);
 }
-
 /* 3. سيكشن الـ Hero */
 .hero-section {
   position: relative;
@@ -30,7 +27,6 @@
   overflow: hidden;
   background-color: var(--color-black);
 }
-
 .hero-section::before {
   content: "";
   position: absolute;
@@ -41,10 +37,9 @@
   background: url("images/war.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   z-index: 0;
-  animation: kenBurns 20s infinite alternate ease-in-out;
+  animation: kenBurns 15s infinite alternate ease-in-out;
   opacity: 0.3;
 }
-
 .background-overlay {
   position: absolute;
   inset: 0;
@@ -56,14 +51,12 @@
   );
   z-index: 1;
 }
-
 .typewriter-container {
   position: relative;
   z-index: 2;
   text-align: center;
   color: var(--color-white);
 }
-
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
@@ -75,7 +68,6 @@
     0 0 15px rgba(255, 255, 255, 0.3),
     0 5px 10px rgba(0, 0, 0, 0.5);
 }
-
 .first {
   font-size: var(--fs-h1);
   width: 0;
@@ -83,19 +75,16 @@
     typing1 3s steps(25) forwards,
     blink 0.7s step-end infinite;
 }
-
 .second {
   font-size: var(--fs-h1);
   direction: ltr;
   text-transform: uppercase;
   letter-spacing: 5px;
   width: 0;
-
   animation:
     typing2 2.5s steps(20) forwards 3.5s,
     blink 0.7s step-end infinite 3.5s;
 }
-
 @keyframes typing1 {
   from {
     width: 0;
@@ -105,7 +94,6 @@
     width: 550px;
   }
 }
-
 @keyframes typing2 {
   from {
     width: 0;
@@ -115,13 +103,11 @@
     width: 500px;
   }
 }
-
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
-
 @keyframes blink {
   0%,
   100% {
@@ -132,7 +118,6 @@
     border-color: transparent;
   }
 }
-
 @keyframes kenBurns {
   0% {
     transform: scale(1);
@@ -142,17 +127,14 @@
     transform: scale(1.3);
   }
 }
-
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
 }
-
 .stat-number::after {
   content: counter(num);
 }
-
 @keyframes countUp {
   from {
     --num: 0;
@@ -162,7 +144,6 @@
     --num: var(--final-num);
   }
 }
-
 .stat-number {
   display: block;
   font-size: 2rem;
@@ -170,34 +151,19 @@
   color: #fff;
   counter-reset: num var(--num);
 }
-
 .stat-label {
   color: var(--color-light-gray);
 }
-
-@keyframes countUp {
-  from {
-    --num: 0;
-  }
-
-  to {
-    --num: var(--final-num);
-  }
-}
-
 .population {
   background-color: var(--color-black);
-  /* */
   padding: var(--section-padding);
 }
-
 .section-header h2 {
   color: var(--color-white);
   font-size: var(--fs-h2);
   text-align: center;
   margin-bottom: 20px;
 }
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -205,7 +171,6 @@
   gap: 40px;
   width: 100%;
 }
-
 .cards {
   position: relative;
   flex: 0 1 350px;
@@ -218,13 +183,11 @@
   border: 1px solid rgba(139, 0, 0, 0.3);
   transition: var(--transition);
 }
-
 .cards:hover {
   transform: translateY(-8px);
   border-color: var(--color-red);
   box-shadow: 0 0 40px rgba(225, 6, 0, 0.2);
 }
-
 .img-1 {
   background-image: url("images/destruction-e1697743361399.webp");
 }
@@ -263,7 +226,6 @@
   background-size: cover;
   background-position: center;
 }
-
 .card-overlay {
   position: absolute;
   inset: 0;
@@ -278,34 +240,25 @@
   padding: 25px;
   position: absolute;
 }
-
 .section-header {
   text-align: center;
   margin-bottom: 50px;
-
   margin-left: auto;
   margin-right: auto;
 }
-
-/* =============================
-   Infrastructure Data Section
-============================= */
-
+/*Infrastructure Data Section*/
 .impact-infrastructure {
   background: var(--color-dark);
 }
-
 .impact-infrastructure__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
 }
-
 .impact-infrastructure__info {
   max-width: 600px;
 }
-
 .impact-infrastructure__tag {
   display: inline-block;
   font-size: 14px;
@@ -313,27 +266,22 @@
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
-
 .impact-infrastructure__title {
   font-size: var(--fs-h2);
   margin-bottom: 20px;
 }
-
 .impact-infrastructure__description {
   margin-bottom: 25px;
   color: rgba(255, 255, 255, 0.8);
 }
-
 .impact-infrastructure__stats {
   list-style: none;
   padding: 0;
 }
-
 .impact-infrastructure__stats li {
   margin-bottom: 10px;
   font-size: 16px;
 }
-
 .impact-infrastructure__stats strong {
   color: var(--color-red);
 }
@@ -341,7 +289,6 @@
   display: flex;
   justify-content: center;
 }
-
 .impact-infrastructure__visual img {
   max-height: 90vh;
   width: fit-content;
@@ -350,7 +297,6 @@
   box-shadow: var(--shadow-lg);
   filter: invert(1) hue-rotate(190deg) saturate(1.5);
 }
-
 .services,
 .crisis-section {
   padding: var(--section-padding);
@@ -373,7 +319,6 @@
   flex-wrap: wrap;
   max-width: 1200px;
 }
-
 .service-card {
   background: rgba(128, 128, 128, 0.11);
   padding: 40px 30px;
@@ -387,7 +332,6 @@
   transform: translateY(-8px);
   background-color: transparent;
 }
-
 .icon-box {
   width: 60px;
   height: 60px;
@@ -399,19 +343,15 @@
   font-size: 24px;
   color: #ffffff;
 }
-
 .icon-box.blue {
   background-color: #007bff;
 }
-
 .icon-box.green {
   background-color: green;
 }
-
 .icon-box.red {
   background-color: #ff0000;
 }
-
 .progress-container {
   background: rgba(255, 255, 255, 0.1);
   height: 8px;
@@ -419,36 +359,28 @@
   margin-top: 15px;
   overflow: hidden;
 }
-
 .progress-container {
   margin-top: 25px;
   background: #eeeeee;
   height: 10px;
   border-radius: 20px;
   overflow: hidden;
-  /* عشان البار ميتخطاش الحواف */
 }
-
 .progress-bar {
   height: 100%;
 }
-
-/* ألوان البارات الصريحة */
 .blue-bar {
   background-color: #007bff;
   width: var(--target-width);
 }
-
 .green-bar {
   background-color: green;
   width: var(--target-width);
 }
-
 .red-bar {
   background-color: #ff0000;
   width: var(--target-width);
 }
-
 .progress-text {
   display: block;
   margin-top: 10px;
@@ -461,19 +393,15 @@
   background-color: var(--color-black);
   text-align: center;
 }
-
 .crisis-grid {
   display: flex;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
 }
-
 .crisis-column {
   flex: 0 1 450px;
 }
-
-/* العناوين */
 .crisis-title {
   font-size: 28px;
   margin-bottom: 30px;
@@ -482,11 +410,8 @@
   justify-content: center;
   gap: 15px;
 }
-
-/* الكروت والتأثيرات */
 .crisis-card {
   background-color: #161616;
-
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 20px;
@@ -496,69 +421,42 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-
 .crisis-card:hover {
   transform: translateY(-5px);
 }
-
 .blue-text {
   color: var(--color-green);
 }
-
 .crisis-column:first-child .crisis-card:hover {
   box-shadow: 0 0 30px rgba(0, 128, 0, 0.2);
   border-color: var(--color-green);
 }
-
 .red-text {
   color: var(--color-red);
 }
-
 .crisis-column:last-child .crisis-card:hover {
   box-shadow: 0 0 30px rgba(255, 49, 49, 0.2);
   border-color: var(--color-red);
 }
-
 .stat-number {
   display: block;
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 10px;
+ 
+ 
 }
 
 .crisis-card p {
   color: var(--color-white);
 }
 
-@keyframes kenBurns {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
 /* --- قسم مصادر البيانات (Data Sources) --- */
-
 :root {
   --primary-glow: var(--color-green);
-  /* اللون الأخضر للتوهج */
   --text-gray: #b0b0b0;
   --bg-card: rgba(255, 255, 255, 0.05);
 }
-
 .sources-section {
   background-color: #0a0a0a;
   padding: 100px 20px;
@@ -566,18 +464,15 @@
   direction: rtl;
   overflow: hidden;
 }
-
 .section-title {
   text-align: center;
   margin-bottom: 80px;
 }
-
 .timeline-container {
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
 }
-
 /* الخط الرأسي في المنتصف */
 .timeline-container::after {
   content: "";
@@ -589,7 +484,6 @@
   left: 50%;
   margin-left: -1px;
 }
-
 .timeline-item {
   padding: 20px 50px;
   position: relative;
@@ -599,13 +493,11 @@
   /* للأنيميشن */
   animation: fadeInTimeline 0.8s ease forwards;
 }
-
 @keyframes fadeInTimeline {
   to {
     opacity: 1;
   }
 }
-
 /* توزيع العناصر يمين وشمال */
 .timeline-item:nth-child(odd) {
   left: 0;
@@ -613,7 +505,6 @@
   padding-right: 50px;
   padding-left: 0;
 }
-
 .timeline-item:nth-child(even) {
   left: -50%;
   /* هنستخدم السالب عشان يروح الناحية التانية في الـ RTL */
@@ -622,7 +513,6 @@
   padding-left: 50px;
   padding-right: 0;
 }
-
 /* الدوائر التفاعلية على الخط */
 .timeline-dot {
   position: absolute;
@@ -635,7 +525,6 @@
   transition: all 0.4s ease;
   border: 2px solid #0a0a0a;
 }
-
 .timeline-item:nth-child(odd) .timeline-dot {
   left: -7px;
 }
@@ -644,7 +533,6 @@
   right: -7px;
   left: auto;
 }
-
 /* تأثير التوهج عند الوقوف بالماوس */
 .timeline-item:hover .timeline-dot {
   background-color: var(--primary-glow);
@@ -653,7 +541,6 @@
     0 0 30px var(--primary-glow);
   transform: scale(1.3);
 }
-
 /* تصميم كارت المصدر */
 .timeline-content {
   padding: 25px;
@@ -663,27 +550,23 @@
   transition: all 0.3s ease;
   position: relative;
 }
-
 .timeline-item:hover .timeline-content {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--primary-glow);
   transform: translateY(-5px);
 }
-
 .timeline-content h3 {
   margin-top: 0;
   color: #fff;
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
-
 .timeline-content p {
   color: var(--text-gray);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
-
 /* تنسيق اللينك */
 .source-link {
   color: var(--primary-glow);
@@ -693,19 +576,16 @@
   display: inline-block;
   transition: 0.3s;
 }
-
 .source-link:hover {
   letter-spacing: 1px;
   text-shadow: 0 0 5px var(--primary-glow);
 }
-
 /* --- Responsive: التجاوب مع الموبايل --- */
 @media screen and (max-width: 768px) {
   .timeline-container::after {
     left: 20px;
     /* تحريك الخط لليسار في الموبايل */
   }
-
   .timeline-item {
     width: 100%;
     padding-left: 50px;
@@ -714,9 +594,104 @@
     text-align: right !important;
     /* توحيد الاتجاه في الموبايل */
   }
-
   .timeline-dot {
     left: 13px !important;
     right: auto !important;
   }
 }
+   
+
+
+/* ===== SECTION: BEFORE & AFTER HORIZONTAL GALLERY ===== */
+      
+            /* 1. السيكشن الرئيسي بخلفية سوداء */
+            .before-after-gallery {
+              background-color: var(--color-black);
+              padding: var(--section-padding);
+              overflow: hidden;
+            }     
+            /* 2. حاوية السكرول العرضي */
+            .horizontal-scroll-wrapper {
+              display: flex;
+              gap: 30px;
+              overflow-x: auto;
+              padding: 20px 10px 40px;
+              scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+              scrollbar-width: thin; 
+              /* بتخلي الاسكرول بار شكله حلو ومودرن */
+              cursor: grab;
+            }     
+            /* 3. كارت المكان بتأثير الزجاج */
+            .scroll-card {
+              flex: 0 0 500px;
+              /* background: rgba(255, 255, 255, 0.03); 
+               border: 1px solid rgba(255, 255, 255, 0.1); */
+              border-radius: var(--radius-lg);
+              padding: 25px;
+              text-align: center;
+              scroll-snap-align: center;
+              transition: var(--transition);
+            }     
+            .scroll-card:hover {
+              /* border-color: var(--color-red);
+              background: rgba(225, 6, 0, 0.05); */
+              transform: translateY(-10px);
+             
+            }
+            .comparison-images {
+              display: flex;
+              gap: 12px;
+              margin-bottom: 20px;
+              height: 220px;
+            }
+      
+            .before,
+            .after {
+              position: relative;
+              flex: 1;
+              overflow: hidden;
+              border-radius: var(--radius);
+            }
+      
+            .before img,
+            .after img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: var(--transition);
+            }
+      
+            /* 5. علامات (قبل وبعد) */
+            .before span,
+            .after span {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              padding: 4px 12px;
+              font-size: 12px;
+              font-weight: bold;
+              color: white;
+              border-radius: var(--radius-sm);
+              z-index: 2;
+            }
+      
+            .before span {
+              background: var(--color-green);
+            }
+            .after span {
+              background: var(--color-red);
+            }
+            /* 6. تخصيص السكرول بار الأحمر لهذا الجزء */
+            .horizontal-scroll-wrapper::-webkit-scrollbar {
+              height: 8px;
+            }         
+            @media (max-width: 768px) {
+              .scroll-card {
+                flex: 0 0 85%;
+      
+              }
+            }     
+            .horizontal-scroll-wrapper h3 {
+              color: white;
+            }
