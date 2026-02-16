@@ -599,3 +599,99 @@
     right: auto !important;
   }
 }
+   
+
+
+/* ===== SECTION: BEFORE & AFTER HORIZONTAL GALLERY ===== */
+      
+            /* 1. السيكشن الرئيسي بخلفية سوداء */
+            .before-after-gallery {
+              background-color: var(--color-black);
+              padding: var(--section-padding);
+              overflow: hidden;
+            }     
+            /* 2. حاوية السكرول العرضي */
+            .horizontal-scroll-wrapper {
+              display: flex;
+              gap: 30px;
+              overflow-x: auto;
+              padding: 20px 10px 40px;
+              scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+              scrollbar-width: thin; 
+              /* بتخلي الاسكرول بار شكله حلو ومودرن */
+              cursor: grab;
+            }     
+            /* 3. كارت المكان بتأثير الزجاج */
+            .scroll-card {
+              flex: 0 0 500px;
+              /* background: rgba(255, 255, 255, 0.03); 
+               border: 1px solid rgba(255, 255, 255, 0.1); */
+              border-radius: var(--radius-lg);
+              padding: 25px;
+              text-align: center;
+              scroll-snap-align: center;
+              transition: var(--transition);
+            }     
+            .scroll-card:hover {
+              /* border-color: var(--color-red);
+              background: rgba(225, 6, 0, 0.05); */
+              transform: translateY(-10px);
+             
+            }
+            .comparison-images {
+              display: flex;
+              gap: 12px;
+              margin-bottom: 20px;
+              height: 220px;
+            }
+      
+            .before,
+            .after {
+              position: relative;
+              flex: 1;
+              overflow: hidden;
+              border-radius: var(--radius);
+            }
+      
+            .before img,
+            .after img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: var(--transition);
+            }
+      
+            /* 5. علامات (قبل وبعد) */
+            .before span,
+            .after span {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              padding: 4px 12px;
+              font-size: 12px;
+              font-weight: bold;
+              color: white;
+              border-radius: var(--radius-sm);
+              z-index: 2;
+            }
+      
+            .before span {
+              background: var(--color-green);
+            }
+            .after span {
+              background: var(--color-red);
+            }
+            /* 6. تخصيص السكرول بار الأحمر لهذا الجزء */
+            .horizontal-scroll-wrapper::-webkit-scrollbar {
+              height: 8px;
+            }         
+            @media (max-width: 768px) {
+              .scroll-card {
+                flex: 0 0 85%;
+      
+              }
+            }     
+            .horizontal-scroll-wrapper h3 {
+              color: white;
+            }
