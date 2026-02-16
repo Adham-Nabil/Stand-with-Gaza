@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stories</title>
+    <title>Stand with Gaza | Stories</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/stories.css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,8 +23,59 @@
     />
   </head>
   <body>
+    <div id="top"></div>
+
     <!-- Header -->
-    <header></header>
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="lang-dropdown">
+          <button class="lang-btn">
+            <i class="fa-solid fa-globe"></i>
+            العربية
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="lang-menu">
+            <a href="#" class="active">العربية (ع)</a>
+            <a href="#">English (EN)</a>
+          </div>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-links">
+          <a href="./index.html">الرئيسية</a>
+          <a href="./impacts.html">التأثيرات</a>
+          <a href="./stories.html" class="active">قصص</a>
+          <a href="./action.html">اتخذ موقف</a>
+          <div class="lang-dropdown mobile">
+            <button class="lang-btn">
+              <i class="fa-solid fa-globe"></i>
+              العربية
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="lang-menu">
+              <a href="#" class="active">العربية (ع)</a>
+              <a href="#">English (EN)</a>
+            </div>
+          </div>
+        </nav>
+
+        <a href="#" class="logo">
+          <span class="logo-text">
+            <span class="stand">Stand</span>
+            <span class="with">With</span>
+            <span class="gaza">Gaza</span>
+          </span>
+          <img src="./assets/logo.svg" alt="Stand With Gaza" />
+        </a>
+      </div>
+    </header>
     <!-- Content -->
     <main>
       <!-- Page Title -->
@@ -31,7 +84,7 @@
       </section>
       <section class="content">
         <!-- صالح الجعفراوي -->
-        <article>
+        <article id="saleh">
           <header>
             <h2>
               <span class="headline-1"> صالح الجعفراوي </span>
@@ -95,7 +148,7 @@
           </section>
         </article>
         <!-- آمنة حميد-->
-        <article>
+        <article id="#aamna">
           <header>
             <h2>
               <span class="headline-1"> آمنة حميد</span>
@@ -172,5 +225,8 @@
     </main>
     <!-- Footer -->
     <footer></footer>
+    <a href="#top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa-solid fa-caret-down"></i>
+    </a>
   </body>
 </html>

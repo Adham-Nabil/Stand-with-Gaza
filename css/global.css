@@ -261,13 +261,13 @@ p {
 }
 
 .logo img {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
 .logo-text {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1.25rem;
   letter-spacing: 0.5px;
 }
 
@@ -383,6 +383,127 @@ p {
   border-color: var(--color-red);
   transform: rotate(180deg);
   box-shadow: 0 0 40px rgba(225, 6, 0, 0.2);
+}
+/* ===== FOOTER CLEAN ===== */
+
+.footer {
+  background: #0a0a0a;
+  padding: 80px 80px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* GRID LAYOUT */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+/* COLUMN HEADINGS */
+.footer-col h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: var(--color-white);
+}
+
+/* TEXT + LINKS */
+.footer-col p,
+.footer-col a {
+  display: block; /* Critical fix */
+  font-size: 14px;
+  color: #9c9c9c;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--color-white);
+}
+
+/* BRAND COLUMN */
+.footer-brand .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-tagline {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.heart {
+  color: var(--color-red);
+}
+
+/* IEEE */
+.footer-ieee {
+  margin-top: 20px;
+}
+
+.ieee-logo {
+  width: 120px;
+  margin: 10px 0;
+  opacity: 0.85;
+  transition: var(--transition);
+}
+
+.ieee-logo:hover {
+  opacity: 1;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #7a7a7a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer-col a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #9c9c9c;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-col a i {
+  font-size: 14px;
+  width: 18px;
+  color: var(--color-green);
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--color-white);
+  transform: translateX(4px);
+}
+
+.footer-col a:hover i {
+  color: var(--color-red);
 }
 
 /* Responsive Breakpoints */
