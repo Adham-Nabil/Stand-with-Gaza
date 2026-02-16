@@ -88,7 +88,6 @@ p {
   font-size: var(--fs-body);
   font-weight: 600;
   text-decoration: none;
-  border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition);
   border: 2px solid transparent;
