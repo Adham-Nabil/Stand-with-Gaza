@@ -6,10 +6,6 @@ body {
   color: var(--color-red);
 }
 
-main {
-  margin-inline: 100px;
-}
-
 /* Page Title */
 .title {
   height: 12vh;
@@ -147,6 +143,7 @@ blockquote {
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   article {
@@ -154,6 +151,7 @@ blockquote {
     border-left: none;
     border-bottom: medium double #333;
     padding: 20px 15px;
+    text-align: center;
   }
 
   article h2 .headline-1 {
